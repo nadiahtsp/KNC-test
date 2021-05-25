@@ -34,4 +34,6 @@ Route::get('/company/{company}/detail', 'CompanyController@show')->name('show.co
 Route::get('/company/{company}/edit', 'CompanyController@edit')->name('edit.company');
 Route::delete('/company/{company}/delete', 'CompanyController@destroy')->name('destroy.company');
 
-Route::get('/report', 'ReportController@index')->name('index.report');
+
+
+Route::get('/report', 'CompanyController@report')->name('index.report');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Employee;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -103,5 +104,11 @@ class CompanyController extends Controller
     {
         $company->delete();
         return redirect()->route('index.company')->with('status', 'Data berhasil di hapus');
+    }
+
+    public function report()
+    {
+        $companies = Company::withCount(['employee'])->orderBy('employee_count','DESC')->get();
+        return view('report.index',compact('companies'));
     }
 }

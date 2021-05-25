@@ -28,7 +28,7 @@
                 <tbody>
                     @foreach($employees as $employee)
                     <tr>
-                        <th scope="row">{{$employee->id}}</th>
+                        <th scope="row">{{$loop->iteration}}</th>
                         <td>{{$employee->fullname}}</td>
                         <td>{{$employee->company->company_name}}</td>
                         <td>{{$employee->department}}</td>
@@ -55,6 +55,15 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="row float-right">
+        <div class="col-md-12">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {{$employees->links()}}
+                </ul>
+            </nav>
         </div>
     </div>
 </div>

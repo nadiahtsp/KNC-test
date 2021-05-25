@@ -27,7 +27,7 @@
                 <tbody>
                     @foreach($companies as $company)
                     <tr>
-                        <th scope="row">{{$company->company_id}}</th>
+                        <th scope="row">{{$loop->iteration}}</th>
                         <td>{{$company->company_name}}</td>
                         <td>{{$company->company_email}}</td>
                         <td>{{$company->company_address}}</td>

@@ -28,7 +28,7 @@
                 <input disabled value="{{$employee->phone}}" type="email" class="form-control" >
             </div>
 
-            <a href="{{route('index.employee')}}" type="button" class="btn btn-secondary">Back to Home</a>
+            <a href="{{route('index.employee')}}" type="button" class="btn btn-secondary">Back</a>
         </div>
     </div>
 </div>

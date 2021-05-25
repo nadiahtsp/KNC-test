@@ -11,13 +11,13 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="employee_name">Employee Name</label>
-                        <input value="{{$employee->fullname}}" type="text" class="form-control" id="fullname" name="fullname" placeholder="fullname">
+                        <input required value="{{$employee->fullname}}" type="text" class="form-control" id="fullname" name="fullname" placeholder="fullname">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="employee_email">Company</label>
-                    <select class="custom-select" name="id_comp" id="inputGroupSelect01">
-                        <option selected>Choose...</option>
+                    <select required class="custom-select" name="id_comp" id="inputGroupSelect01">
+                        <option value="">Choose...</option>
                         @foreach($companies as $company)
                         <option value="{{$company->company_id}}" @if($employee->id_comp === $company->company_id) selected @endif>{{$company->company_name}}</option>
                         @endforeach
@@ -25,15 +25,15 @@
                 </div>
                 <div class="form-group">
                     <label for="department">Department</label>
-                    <input value="{{$employee->department}}" type="text" class="form-control" id="department" name="department" placeholder="Department">
+                    <input required value="{{$employee->department}}" type="text" class="form-control" id="department" name="department" placeholder="Department">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input value="{{$employee->email}}" type="text" class="form-control" id="email" name="email" placeholder="email">
+                    <input required value="{{$employee->email}}" type="text" class="form-control" id="email" name="email" placeholder="email">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input value="{{$employee->phone}}" type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                    <input required value="{{$employee->phone}}" type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Update employee</button>

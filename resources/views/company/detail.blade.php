@@ -24,7 +24,7 @@
                 <input disabled value="{{$company->company_phone}}" type="text" class="form-control" id="company_phone" name="company_phone" placeholder="Phone">
             </div>
 
-            <a href="{{route('index.company')}}" type="button" class="btn btn-secondary">Back to Home</a>
+            <a href="{{route('index.company')}}" type="button" class="btn btn-secondary">Back</a>
         </div>
     </div>
 </div>
